@@ -1,6 +1,6 @@
 {
-  "host": "172.17.0.3",
+  "host": "",
   "user": "root",
   "database": "inventario",
-  "password": "QWEasd.,123"
+  "password": ""
 }
