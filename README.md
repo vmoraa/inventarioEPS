@@ -2,6 +2,11 @@
 
 Install NPM y NODEJS..
 
+cd /backend/config
+
+Editar DB config.json 
+  
+
 cd backend/
 
 npm install
