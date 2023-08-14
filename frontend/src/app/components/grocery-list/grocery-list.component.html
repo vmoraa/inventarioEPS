@@ -1,0 +1,108 @@
+<mat-toolbar color="primary">CRUD Angular</mat-toolbar>
+<h1
+  style="
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 100px;
+  "
+>
+Inventario para  evaluación EPS
+</h1>
+<!-- <form class="form-group">
+  <button (click)="post(groceryInput.value)" mat-fab color="primary"style="float: right;">
+  <mat-icon>add</mat-icon>
+  </button>
+ 
+    <mat-label>Ingrese item</mat-label>
+    <input #groceryInput matInput placeholder="Ex. notebook " />
+
+  <mat-label>Ingrese descripción</mat-label>
+  <input #groceryInput matInput placeholder="Ex. marca HP" />
+
+</form> -->
+<div class="formulario" >
+  <div></div>
+
+  <div>
+    <form >
+      <button (click)="post(groceryInput.value,groceryInput2.value )" mat-mini-fab color="primary"style="float: right;">add</button>
+      <mat-form-field class="example-full-width">
+        <mat-label>ITEM</mat-label>
+        <input #groceryInput  matInput placeholder="Ex. notebook" >
+      </mat-form-field>
+    
+      <mat-form-field class="example-full-width">
+        <mat-label>DESCRIPCION</mat-label>
+        <input #groceryInput2 matInput placeholder="Ex. marca HP">
+      </mat-form-field>
+      
+     
+    </form>
+
+  </div>
+
+  <div></div>
+ 
+  
+     
+
+</div>
+
+
+<div class="tabla">
+
+  <div></div>
+  <div>
+
+    <table>
+
+      <thead>
+        <th>N°</th>
+        <th>Id</th>
+        <th>Item</th>
+        <th>Descripción</th>
+        <th>Editar</th>
+        <th>Enviar</th>
+        <th>Borrar</th>
+    </thead>
+     
+      <tr *ngFor="let grocery of groceries$   | async; index as i;">
+   
+        <td> {{i }}</td>
+          <td> {{ grocery.id }}</td>
+          <ng-container *ngIf="editarFormulario ; else sininput">
+          <td>  <input #groceryInput value="{{ grocery.item }}"></td>
+        
+          <td>  <input  #groceryInput2 value="{{ grocery.nombre }}"></td>
+          <td> <button mat-icon-button  (click)="EditarForm()" color="primary" > Editar</button> </td>
+          <td> <button mat-icon-button  (click)="update(grocery.id, groceryInput.value,  groceryInput2.value)" color="primary" > Enviar</button> </td>
+        </ng-container>
+
+        <ng-template #sininput> 
+          
+          <td>  {{ grocery.item }}"</td>
+       
+          <td>  "{{ grocery.nombre }}"</td>
+          <td> <button mat-icon-button  (click)="EditarForm()" color="primary" > Editar</button> </td>
+          <td> <button mat-icon-button  (click)="update(grocery.id, groceryInput.value,  groceryInput2.value)" color="primary" > Enviar</button> </td>
+
+        </ng-template>
+
+          <td> <button mat-icon-button (click)="delete(grocery.id)" color="warn" >  delete </button>  </td>
+        
+      </tr>
+     </table>
+  </div>
+  <div></div>
+
+</div>
+
+  
+
+   
+
+   <!-- <td> <button mat-icon-button> <mat-icon (click)="update(grocery.id, groceryInput.value)" color="primary"> edit </mat-icon></button> </td>
+   <td> <button mat-icon-button> <mat-icon (click)="delete(grocery.id)" color="warn"> delete </mat-icon> </td> -->
+
+

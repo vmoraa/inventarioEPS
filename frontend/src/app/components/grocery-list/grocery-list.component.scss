@@ -1,0 +1,57 @@
+
+
+.formulario{
+  
+   
+    display: grid;
+    
+    padding: 10;
+    
+    grid-template-columns:  auto 600px auto; 
+   
+   
+   
+      
+  }
+
+  .formulario div  {
+
+    // border: 2px solid  rgb(198,143,38);
+
+    border-radius: 5px;
+   
+
+  }
+
+  .tabla{
+
+    display: grid;
+    
+    padding: 10;
+    
+    grid-template-columns: auto 600px auto; 
+   
+   
+  }
+
+
+
+
+
+table thead{
+    background: linear-gradient(360deg, rgba(10,10,11,1) 11%, rgba(43,52,64,1) 51%, rgba(9,10,13,1) 100%);
+    font-size: 20px;
+    color: white;
+    
+    
+
+}
+
+table td {
+    background: linear-gradient(0deg, rgba(73,111,143,1) 45%, rgba(20,25,25,1) 99%);
+    border-radius: 5px;
+
+    color: white;
+    padding: 1em;
+    font-size: 1rem;
+  }
