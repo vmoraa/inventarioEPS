@@ -81,9 +81,9 @@ Inventario para  evaluación EPS
 
         <ng-template #sininput> 
           
-          <td>  {{ grocery.item }}"</td>
+          <td>  {{grocery.item}}</td>
        
-          <td>  "{{ grocery.nombre }}"</td>
+          <td>  {{ grocery.nombre }}</td>
           <td> <button mat-icon-button  (click)="EditarForm()" color="primary" > Editar</button> </td>
           <td> <button mat-icon-button  (click)="update(grocery.id, groceryInput.value,  groceryInput2.value)" color="primary" > Enviar</button> </td>
 
@@ -104,5 +104,4 @@ Inventario para  evaluación EPS
 
    <!-- <td> <button mat-icon-button> <mat-icon (click)="update(grocery.id, groceryInput.value)" color="primary"> edit </mat-icon></button> </td>
    <td> <button mat-icon-button> <mat-icon (click)="delete(grocery.id)" color="warn"> delete </mat-icon> </td> -->
-
 
