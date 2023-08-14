@@ -14,7 +14,7 @@
 
   - cd frontend/
   - npm install
-  -  ng serve --host ip --port 4002
+  -  ng serve  --host  ip  --port  4002
 
 
 
