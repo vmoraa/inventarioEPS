@@ -21,6 +21,8 @@ export class GroceryListComponent implements OnInit {
   newItem: Grocery;
   editarFormulario=false;
   optionsbar:any;
+  variableGrafico:any;
+  varGrafico:boolean=false;
   
   constructor(private groceryListCrudService: GroceryListCrudService) {}
 
@@ -217,4 +219,14 @@ for (const age in repeticions) {
    
        
        }
+// -----  eventos para graficos------------------------
+ eventosgraficos(evento:any){
+    console.log(evento.point.options)
+    
+    if(evento.point.options){
+      this.varGrafico=true;
+      this.variableGrafico=evento.point.options
+    }
+
+ }      
 }

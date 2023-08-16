@@ -4,10 +4,12 @@
     text-align: center;
     font-size: 48px;
     font-weight: bold;
+    font-style: italic;
     margin-top: 100px;
   "
 >
 Inventario para  evaluación EPS 
+
 </h1>
 <!-- <form class="form-group">
   <button (click)="post(groceryInput.value)" mat-fab color="primary"style="float: right;">
@@ -25,7 +27,7 @@ Inventario para  evaluación EPS
   
   <div>
     <form >
-      <button (click)="post(groceryInput.value,groceryInput2.value )" mat-mini-fab color="primary"style="float: right;">add</button>
+      <button (click)="post(groceryInput.value,groceryInput2.value)" mat-mini-fab color="primary"style="float: right;">add</button>
       <mat-form-field class="example-full-width">
         <mat-label>ITEM</mat-label>
         <input #groceryInput  matInput placeholder="Ex. notebook" >
@@ -40,9 +42,15 @@ Inventario para  evaluación EPS
     </form>
 
   </div>
-
-  <div></div>
+  <ng-container *ngIf="varGrafico ; else sinvalorgrafico">
+    <div> <h2> Item seleccionado: {{variableGrafico.name}}  Valor: {{variableGrafico.y}}</h2></div>
+    
+  </ng-container>
  
+  <ng-template #sinvalorgrafico>
+   
+     <div> <h2> Seleccione grafico: </h2></div>
+  </ng-template>
   
      
 
@@ -70,7 +78,7 @@ Inventario para  evaluación EPS
        
         <tr *ngFor="let grocery of groceries$   | async; index as i;">
      
-          <td> {{i }}</td>
+          <td> {{i}}</td>
             <td> {{ grocery.id }}</td>
             <ng-container *ngIf="editarFormulario ; else sininput">
             <td>  <input #groceryInput value="{{ grocery.item }}"></td>
@@ -99,11 +107,15 @@ Inventario para  evaluación EPS
   
   </div>
   
-  <div id="bar1"></div>
-  <div id="bar2"></div>
-
+  <div (click)="eventosgraficos($event)"   id="bar1">
+  
+  </div>
+  <div (click)="eventosgraficos($event)"   id="bar2">
+    
+  </div>
+ 
+ 
 
 </div>
 
-  
 
