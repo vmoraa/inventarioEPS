@@ -7,7 +7,7 @@
     
     padding: 10;
     
-    grid-template-columns:  auto 600px auto; 
+    grid-template-columns: 600px auto  auto; 
    
    
    
@@ -29,7 +29,7 @@
     
     padding: 10;
     
-    grid-template-columns: auto 600px auto; 
+    grid-template-columns: 600px 600px  600px; 
    
    
   }
@@ -54,4 +54,5 @@ table td {
     color: white;
     padding: 1em;
     font-size: 1rem;
+   
   }
